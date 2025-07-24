@@ -25,13 +25,13 @@ public class SearchTests extends TestBase {
     void openAnyArticleTest() {
         step("Open search and type query", () -> {
             mainPage.clickSearchIcon();
-            searchPage.enterSearchQuery("Allure");
+            searchPage.enterSearchQuery("Selenide");
         });
 
         step("Open first article", searchPage::openFirstSearchResult);
 
         step("Verify article page is opened", () -> {
-            searchPage.shouldSeeArticleTitle("Allure");
+            searchPage.shouldSeeArticleTitle("Selenide");
         });
     }
 }
